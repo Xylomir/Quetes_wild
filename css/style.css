@@ -1,0 +1,21 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* English : Replace the dots below by a selector targeting all the images of the page. */
+/* Français : Remplace les points ci-dessous par un sélecteur ciblant toutes les images de la page. */
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius:10px;      /* English : Replace with a property that makes the image borders look rounded. */
+            /* Français : Remplace par une propriété arrondissant les angles de l'image. */
+}
+
+p {
+    color: red;
+}
+
+.big {
+    height: 200px;
+}

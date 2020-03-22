@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html class=" js no-touch"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://styleguide.mockflow.com/favicon.ico">
+<title>MockFlow StyleGuide</title>
+
+
+<!--  external css files -->
+<link href="index_data_003/bootstrap-min.css" rel="stylesheet" type="text/css">	
+<link href="index_data_003/mficons.css" rel="stylesheet" type="text/css">
+
+<!--  external js files -->
+<!-- mfexternal-min.js -->
+ 
+
+<script type="text/javascript" src="modernizr.js"></script>
+<script type="text/javascript" src="jquery_002.js"></script>
+<script type="text/javascript" src="jquery-ui-1.js"></script>
+<script type="text/javascript" src="jquery_004.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="arraycollection.js"></script> 
+<script type="text/javascript" src="index_data_006/jquery.js"></script>
+<script type="text/javascript" src="handlebars-1.js"></script> 
+<script type="text/javascript" src="index_data_006/imgLiquid-min.js"></script>
+<script type="text/javascript" src="moment.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script> 
+<script type="text/javascript" src="jquery_003.js"></script>
+<script type="text/javascript" src="index_data_006/socket.js"></script>
+
+<!-- internal DWR files -->
+<script type="text/javascript" src="index_data_003/engine.js"></script>
+<script type="text/javascript" src="index_data_003/util.js"></script>
+<script type="text/javascript" src="index_data_003/MF_AccountManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_LogManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_LogSharedManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_ProjectManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_TeamManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_LabelManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_Authentication.js"></script>
+<script type="text/javascript" src="index_data_003/MF_UserManager.js"></script>
+<script type="text/javascript" src="index_data_003/MF_LicenseManager.js"></script>
+
+
+
+
+<!-- end of DWR files -->
+
+<!-- internal js files -->
+
+<script type="text/javascript" src="index_data_003/mf_styleguide_dashboard-min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="index_data_003/app-min.css" type="text/css">
+<link rel="stylesheet" href="index_data_003/dashboard.css" type="text/css">
+
+<script type="text/javascript"> 
+
+   		
+	$(document).ready(function()
+	{
+		$("#mainBody").show();
+		checkIEVersion();
+		mf_main = new MF_Main();
+		
+		if (Modernizr.touch)
+		{
+		
+		  var fileref2=document.createElement('script')
+		  fileref2.setAttribute("type","text/javascript")
+		  fileref2.setAttribute("src", "js/external/jquery.doubletap.min.js");
+
+		  document.getElementsByTagName("head")[0].appendChild(fileref2);
+		}
+		
+		//set the usersession object
+		
+		
+			 mf_main.gAccess = true;
+			 mf_main.glogin = true;
+		
+		
+
+			
+     	
+				//when you change this make sure the same code in MF_Main is updated
+				MF_UserSession.getUser().firstName = " Guillaume";
+				MF_UserSession.getUser().lastName = "Xuranium";
+				MF_UserSession.getUser().username = "xuranium44@gmail.com";
+				MF_UserSession.getUser().password = "ccCozX0Wgum7EgxCRXMuCKIZ1joVOKONRKhOwpj6uLI=";
+				MF_UserSession.getUser().company = "C9c236095bb134c18821cb39811df0e60";
+				MF_UserSession.getUser().type = "admin";
+				MF_UserSession.getUser().pid = "Pb3f513e9cdb247caa092a49e738a6eab";
+				MF_UserSession.getUser().tokenKey = "null";
+				MF_UserSession.getUser().projectsLeft = 0;
+				MF_UserSession.getUser().isBasic = true;
+				MF_UserSession.getUser().accountType = "Basic";
+				MF_UserSession.getUser().teamPremium = false;
+				MF_UserSession.getUser().teamEditor = false;
+				MF_UserSession.getUser().teamLicenseOwner = "";
+
+				
+				MF_UserSession.getUser().isTrial = false;
+				MF_UserSession.getUser().hadTrial = false;  
+			
+				 
+				MF_UserSession.getUser().plusEdition = "null";
+				
+				MF_UserSession.getUser().emailAlert = true;
+		
+				MF_UserSession.getUser().createDate  = new Date(2020,2,2);
+		
+				if(MF_UserSession.getUser().emailAlert  == "false")
+					MF_UserSession.getUser().emailAlert  = false;
+		
+				if(MF_UserSession.getUser().emailAlert  == "true")
+					MF_UserSession.getUser().emailAlert  = true;
+
+				MF_UserSession.getUser().jwtToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNzd29yZCI6ImNjQ296WDBXZ3VtN0VneENSWE11Q0tJWjFqb1ZPS09OUktoT3dwajZ1TEk9IiwiaXNzIjoiTW9ja0Zsb3ciLCJjb21wYW55IjoiQzljMjM2MDk1YmIxMzRjMTg4MjFjYjM5ODExZGYwZTYwIiwidXNlcm5hbWUiOiJ4dXJhbml1bTQ0QGdtYWlsLmNvbSJ9.e1bF6fIb8dEWzpKUQgM7Yd1ugJaIwpkxP3Lk0rj_dqA";
+
+		mf_main.onLoadInterface();
+
+	});	 
+</script>
+
+
+
+
+<script type="text/javascript">
+
+//create the main app instance
+var mf_main =  null;
+
+$(window).resize(function()
+{
+	if(mf_main)
+	{
+		mf_main.interfaceResize(true);
+	}
+  		
+});
+   			
+$(window).resize();
+
+window.addEventListener('message', function(event) { 
+
+    if(event && event.data)
+    {    	 
+   	 if(event.data == "resizedashboard")
+   	 {
+   		 if(mf_main)
+   		  {
+   				mf_main.interfaceResize(true);
+   		  }
+   	 }
+    }
+	
+}); 
+
+var ConfirmExit = 
+{
+
+   /**
+    * Flag indicating the user should be prompted each
+    * time they attempt to navigate away from or refresh
+    * the Admin HTML page.
+    */
+   prompt: false,
+   promptText: "Continue to lose any unsaved work. If not cancel and save your application from the top menu\n",     
+           
+   /**
+    * Sets the value of "prompt"
+    */
+   setPrompt: function (value) {
+      if (value) {
+         ConfirmExit.prompt = true;
+      } else if (!value) {
+         ConfirmExit.prompt = false;
+      }
+   },
+   /**
+    * Sets the value of "promptText"
+    */
+   setPromptText: function (value) {
+   
+      ConfirmExit.promptText = value;
+   }
+};
+
+
+</script>
+</head>
+<body id="mainBody" class="notranslate" translate="no" style="overflow: hidden; padding: 0px !important;">
+
+	
+	
+			<div id="mfContentPlaceHolder" style="float: left; width: 100%; display: block; height: 0px;">
+				<div id="mfContentLoader" style="display: none; height: 100%; padding-top: 9px; padding-left: 15px; padding-right: 20px;">  			  		
+				  	<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfSVGLoader mfCenterAlign" style="position: absolute; display: block;" id="mfContentLoaderSpinner">		
+				</div>
+				<div id="mfContentHolder" style="display: block; background-color: rgb(255, 255, 255);">  			  		
+				  			
+     					<div id="mfDesignSetsBar" style="display: block; background-color: rgb(255, 255, 255); z-index: 5; position: relative; left: 0px; width: 100%; height: 45px; padding-top: 7px; padding-left: 10px; padding-right: 20px; margin-top: 5px;">			 			
+				 			  		 
+				 			  			&nbsp; 
+				 			  				  			<div id="mfNewProjectBtn" style="" data-original-title="New StyleGuide">+</div>
+       									 <span class="mficon-Search" style="color: #000; font-size: 24px; position: absolute; opacity: 0.5; left: 100px; top: 12px;"></span>&nbsp; 
+       										 <form onsubmit="return false;"><input placeholder="Search" autocomplete="off" style="position: absolute; top: 15px; left: 130px;  border: none; box-shadow: none; width: 97px; height: 12px;   outline: 0;  font-size: 16px;  font-weight: normal; color:  #666;    min-width: 200px; background-color: transparent;" id="mfSearchProjectsInput" type="text" name="search" class="searchBox"></form>
+
+				 						<div id="mfDashboardEmptyTrashContainer" style="display: none;">
+				 			  				<button id="mfDashboardEmptyTrashBtn"><i class="mficon-trash2"></i> &nbsp;Empty Trash</button>
+				 			  			</div>
+				 			  			
+										 <div style="display: inline-block;position: absolute;top: 0px;right: 45px; height: 100%;cursor:pointer;margin-top:10px">
+										 			<span id="mfRefreshDashboardBtn" class="mficon-reload mfImgLink" style="display: inline-block; margin-top: -2px; margin-right: 10px; font-weight: bold; color: #2196F3;   font-size: 20px; float:left;position:relative;" data-original-title="Reload projects"></span>
+										 
+										 			
+										            <div class="mfImgLink mficon-message" id="mfTeamAlertBtn" style="font-size: 20px; margin-top: -2px; vertical-align: middle; cursor:pointer;float:left;position:relative;">
+										               <div id="mfTeamAlertBubble" style="cursor: pointer; position: absolute; width: 16px; height: 16px; display: none; overflow: hidden; right: 220px; z-index: 10; top: 3px">
+										                  <canvas id="mfTeamAlertBubbleCvs" width="16" height="16" style="position: absolute; left: 0px; top: 0px; width: 16px; height: 16px;">
+										                  </canvas>
+										                  <span id="mfTeamAlertBubbleNum" style="position:absolute; left:0px; top:2px; font-size: 10px; color: #fff; font-weight: bold; overflow: hidden; width: 100%; text-align: center; "></span>
+										               </div>
+										            </div>
+										            <div id="mfCurrentLabelSelected" style="overflow: hidden;float: left;margin-left:20px;position: relative;height:20px;">
+										               <p style="max-width:150px;float:left;margin-right:10px;overflow:hidden;text-overflow:ellipsis;display:inline-block;float:right;color:rgb(59,120,231);white-space: nowrap;text-align: right;padding-right: 5px;margin-right:20px;">All StyleGuides</p>
+										               <span class="mficon-angle-down" style="float: left; font-size: 25px;margin-top: -4px;color:rgb(59,120,231);font-weight:bold;position: absolute;top: 0px;right:0px;"></span>
+										            </div>
+										         </div>
+         				 			  			
+			 			 			  		
+			 				</div> 
+			 			
+			 			
+				<div id="mfProjectSpace" style="width: 100%; height: 100%; background-color: #fff;">
+				         <div id="mfDesignBlank" class="mfProjectListItemsCls mfDesignListingCls" style="margin: 0px; padding-top: 60px; display: block; overflow: hidden; padding-left: 10px; padding-right: 10px; width: 100%; height: 100%; float: none;"> <br>                   
+					            <img style="position: absolute; width: 500px; height: auto; left: -20px; top: 50px; " alt="" src="index_data_003/blankimage.jpg">
+					         </div>
+				         <div id="mfDesignSets" class="mfProjectListItemsCls mfDesignListingCls" style="margin: 10px 0px 0px; display: none; overflow: auto; padding-left: 10px; padding-right: 10px; width: 100%; height: 100%; float: none;"></div>
+				         <div id="mfProjectListLoader" class="mfProjectListItemsCls mfDesignListingCls" style="display: none; height: 100%; padding-top: 9px; padding-left: 15px; padding-right: 20px;">  			  		
+						  	<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader" id="mfProjectListLoaderSpinner" style="position: absolute;">
+						 </div>
+						 <div id="mfProjectListPaginationLoader" style="display: none;">
+							 <div class="mfProjectListPaginationLoaderCls" style="height: 100px; padding-top: 9px; padding-left: 15px; padding-right: 20px; position: relative;">  			  		
+							  	<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader" style="position: absolute;">
+							 </div>
+						 </div>
+				      </div>
+				      <div id="mfControl" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); overflow: hidden; display: none; height: 100%; width: 350px; position: absolute; top: 0px; z-index: 999; right: 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px -3px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;"> 
+				          <div id="mfDashSidebarStack" style=" overflow: hidden; display: block; height: 100%; position:relative"> 
+ 				
+ 	<div id="mfDashSidebarLabels" style="   overflow-x: hidden;overflow-y:auto; display: block; padding: 0px;  height: 90%; width: 100%;  ">
+ 			
+ 			<div id="mfLabelList" style="overflow: hidden; padding-left: 15px; width: 320px; height: 90%; padding-right: 5px; padding-top: 10px;" class="ui-sortable">
+
+<div class="mfLabelItemClsall" id="mfLabelItemall" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-document"></div>&nbsp; <span id="mfLabelItemNameall" style="color: #666; margin-top: 2px; ">All StyleGuides</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCountall" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClsowner" id="mfLabelItemowner" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-cloud"></div>&nbsp; <span id="mfLabelItemNameowner" style="color: #666; margin-top: 2px; ">Owned by me</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCountowner" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClsshared" id="mfLabelItemshared" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-group"></div>&nbsp; <span id="mfLabelItemNameshared" style="color: #666; margin-top: 2px; ">Shared by others</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCountshared" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClspublic" id="mfLabelItempublic" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-globe"></div>&nbsp; <span id="mfLabelItemNamepublic" style="color: #666; margin-top: 2px; ">Public StyleGuides</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCountpublic" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClsreadonly" id="mfLabelItemreadonly" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-box"></div>&nbsp; <span id="mfLabelItemNamereadonly" style="color: #666; margin-top: 2px; ">Archived</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCountreadonly" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClstrash" id="mfLabelItemtrash" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+								
+								
+							<div style="float: left; opacity: 0.5;  vertical-align: middle; width: auto; height: 20px; margin-top: 2px;" class="mficon-trash2"></div>&nbsp; <span id="mfLabelItemNametrash" style="color: #666; margin-top: 2px; ">Trash</span>
+							
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+				<span id="mfLabelItemCounttrash" style="font-size: 13px; font-style: italic;  color: #666;">0</span>
+				 
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+
+
+<div class="mfLabelItemClsgap" id="mfLabelItemgap" style="font-weight: normal; cursor: pointer; width: 100%; height: 30px; padding-top: 8px; padding-right: 5px; user-select: none;  font-size: 14px;">	
+
+	<div style="float: left; width: 100%;">
+		
+		<div style="padding-left: 2px;">
+			<div style="float:left; width: 100%; ">
+				<div style="margin-right: 28px; ">
+
+  	
+						
+				</div>
+			</div>
+			
+			<div style="float:left; width: 28px; margin-left: -28px; position: relative; text-align: right;  "> 
+				
+			</div>
+			
+		</div>
+	
+	</div>
+
+	
+
+</div> 
+
+		
+
+</div>
+ 			
+ 			
+ 			 
+ 			
+ 	</div>
+ 	<div id="mfLabelActionBar" style=" padding-left: 15px; width: 100%; height:  55px; padding: 18px; box-sizing:border-box; position:absolute;bottom:0px; background-color:#1ca4fc;">
+ 			
+ 				
+ 				
+ 				<a id="mfLabelAddBtn" class="" style="font-size: 14px;  color: #fff; margin-right: 20px; line-height: 11px; text-decoration: none;  cursor: pointer;"><i class="mficon-plus2" style="font-weight: bold; margin-right: 5px; font-size: 20px;  float: left; color: #fff;"></i><span style="line-height: 20px;">Add new label</span></a>
+ 				&nbsp;&nbsp;&nbsp;		
+ 				<div style="float:right;">
+ 				<span id="mfLabelEditBtn" class="mficon-create_new mfImgLink mfLabelControlIcon" style="display: inline-block; font-size: 22px; color : #fff; cursor:pointer; vertical-align: middle; " data-original-title="Rename selected label"></span>&nbsp;&nbsp;  							 	
+				<span id="mfLabelDelBtn" class="mficon-trash2 mfImgLink mfLabelControlIcon" style="display: inline-block; font-size: 22px; color : #fff; cursor:pointer; vertical-align: middle; " data-original-title="Delete selected label"></span>&nbsp;&nbsp; 
+				<span id="mfLabelHelpBtn" class="mficon-help mfImgLink mfLabelControlIcon" style="display: inline-block; font-size: 22px; color: #fff; cursor:pointer; vertical-align: middle; " data-original-title="Help on labels"></span> 		
+				</div>	
+			 
+ 		
+ 				
+ 			</div>
+ 	
+ </div>
+ 	
+
+				      </div>
+				   </div>
+				</div>
+
+				<div id="mfProjectNotificationMessageWrapper">
+					<div class="mfProjectNotificationHeader">
+						<h2>Notifications</h2>
+						<p>Reload Dashboard to sync with below updates</p>
+						<span id="mfProjectNotificationCloseBtn" class="mfImgLink" title="Close" data-toggle="tooltip">
+							<i class="mficon-close2"></i>
+						</span>
+						
+						
+					</div>
+					<div id="mfProjectNotificationMessageContainer">
+					</div>
+					<div id="mfProjectNotificationMessageCTA">
+						<span id="mfProjectNotificationMessageReload">Reload Dashboard</span>
+					</div>
+				</div>
+				
+			
+			
+			<div id="mfTeamAlertModal" style="display: none;">
+	<div class="mfTeamAlertwrapper">
+		<div class="mfAlertClearWrapper">
+			<span class="mfTeamAlertTitle">Notifications</span>
+			<span class="mfImgLink mficon-trash2" id="mfTeamAlertEmptyBtn"></span>
+		</div>
+		<div class="mfalertlistcls" id="mfTeamAlertModalList"></div>
+	</div>
+</div>
+
+
+
+			
+			
+			
+			<!-- popup menus -->
+			
+			
+			
+			
+			<div id="mfDashSidebarBackground" style="display: none; background-color: rgba(0,0,0,0); position: absolute; top: 0px; left: 0px; z-index: 100; overflow: hidden; height: 100%; width: 100%; "> 
+
+</div> 
+
+<div id="mfDashSidebar" style="box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 0px; background-color: #fff; z-index: 200; position: absolute;  overflow: hidden; top: 0px; left: 0px; display: none; height: 100%; width: 350px; "> 
+	<div style="position: absolute; cursor: pointer; font-weight: bold; top: 10px; left: 10px; text-align: center; ">
+		<div id="mfProjectPermissionUi" class="hidden">
+					<i class="mfPermissionShareIcon mficon-share"></i>
+				<span id="mfPermissionTxt"></span>
+				</div>
+	</div>
+	<a id="mfProjectSBOpenBtn" style="position: absolute; cursor: pointer; font-weight: bold; top: 10px; right: 10px; width: 50px; text-align: center; " class="openProjectBtn">Open</a>								
+					
+	<div id="mfProjectSBThumbContainerOuter" style="border:dashed 1px #333; cursor:pointer; width: 100px; height: 100px;     margin: 60px auto 10px;">			
+	
+		<div id="mfProjectSBThumbContainer" style=" cursor:pointer; width: 100px; height: 100px; vertical-align: top;">			
+			<img class="mfProjectSBThumbCls" id="mfProjectSBThumb" alt="" onerror="this.style.display='none'" style="height: 100%;">
+		</div>
+		
+		
+	
+	</div>
+	
+	
+	<div id="mfProjectSBTitle" style="width: 300px; height: 50px; overflow: hidden; text-align:center; text-overflow: ellipsis; font-size: 14px; font-weight: normal; margin:0 auto; color:#929292 ">
+		
+	</div>
+	
+	
+<!-- 	<img class="mfImgLink" id="mfProjectSBMenuBtn"  alt="" style="position: absolute; cursor: pointer; top: 120px; left: 245px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAbCAYAAADf98keAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA4LzEyLzEzPfvt7QAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAIpSURBVFiF7Zmhj+JAFIc/LriOp38AHvzgEDgEFSQYHAY3AgeeChwklYurxeEZz3jwRd/U3p0gNMt1b2d3b/eY5PolFX0z07755fde07aWJMl3IKDiJfI6EAyHw9qjM/GRNE2Db49OwncqgRxUAjmoBHJQCeSg7powm80+fPE4jj+81hecAn01xhgAWq3WXdxay/l8JggCms3mI1IDPCgxpRRKKbIsu4trrVFKsdlsHpTZFaeD/kWZNBoNtNZEUVTEtNY0Go0vv7eLhzsIQEpZlNqN4/GIlPIudjqdmEwmdLtdRqMR+/2+iCul2O/39Pt9+v0+6/X6buw5SilOp9ObcvOiSXc6HebzOdZahBBorWm32wghijnWWpRSjMdjoijCGMN8PkcIgRACYwytVovdbofWmsViQRRF5HleEt8YQ57nb8rNCwfB1UVaawAOh0PJPVprhBA0m81iw+12u3ARUJTobe3lcvnrvLwRqNPpFAJprUsCZVmGtZanp6fisNbe9annjvssvGjScH3MLxYLjDGEYVja7K2UVqtVEcuyjDAMSyX0mXjjICEEUkrW6zW9Xq80LqUsHARXcZRSxfmfuDns5k7X/N/xoknfkFISx3GpvADCMGS1WhHHMdvtliAI6PV6jMfjVx0UhiGDwYDlcgnAdDp9V061JEl+vPbB7H9+1UjT9Kc3JeYr3jRpX6kc5KASyEElkINKIAeVQA7qQJ6mafVn9WXyX/q52t5QBOytAAAAAElFTkSuQmCC" />
+ -->	
+	<ul class="nav nav-tabs" id="mfProjectDetailsTab">
+	  <li class="active"><a href="#mfProjectTeamMembers">Members</a></li>
+	  <li><a href="#mfProjectLabels" id="mfProjectLabelsList">Labels</a></li>
+	  <li><a id="mfProjectSBMenuBtn" style="padding-bottom: 2px; padding-top: 5px;"><span class="mficon-more" style="font-size: 24px;"></span></a></li>
+	</ul>
+	 
+	<div class="tab-content">
+	  <div class="tab-pane active" style="position:relative;" id="mfProjectTeamMembers">
+	  	<div id="mfDashSidebarProject" style="position: absolute; top: 0px; overflow: hidden; display: block; padding: 0px;  height: 100%; width: 100%;  ">
+	
+			
+							
+							
+			<div id="mfProjectSidebarFrame" style="overflow: hidden; width: 100%; height: 100%; ">
+				
+				
+				
+				<div id="mfMemberCanvas" style="width: 100%; display: block; overflow: hidden;  padding: 0px;">
+									
+				    
+					<div id="mfMemberActionBar" style="overflow: hidden; padding-left: 35px; height: 20px; padding-top: 10px; ">
+						<a id="mfOpenShareBtn" class="mfImgLink mfAddMemberBtn"><i class="mficon-plus2"></i><span style="line-height: 20px;">Add member</span></a>
+					</div>
+					
+					<div id="mfMemberList" style=" overflow-x: hidden;  padding-left: 28px; padding-right: 5px; width: 315px; height: 100%; padding-right: 5px;">
+						
+						
+					</div>
+					
+				</div>
+			</div>
+					
+		</div> 
+	  
+	  
+	  
+	  </div>
+	  <div class="tab-pane" id="mfProjectLabels" style="position:relative; padding:10px 25px;">
+			<a id="mfAddNewLabel" class="mfAddLabelBtn"><i class="mficon-plus2"></i><span style="line-height: 20px;">Add new label</span></a> 
+		  	
+		  	<div id="mfManageLabelsList" style=" overflow-x: hidden; margin-bottom: 20px; width: 325px;">
+
+		  	</div>
+		  	<!-- <a  style="" class="mfManageLabelSaveBtn" style="" id="mfManageLabelsModalSaveBtn" >Save</a> -->
+	  </div>
+	  <div class="tab-pane" id="mfProjectMore"></div>
+	</div>
+	
+	<div id="mfMemberAccessBar" style="position:absolute; bottom:0; overflow: hidden; background-color: #1ca4fc; padding: 0 ; width: 100%; height: 45px; text-align:center;z-index: 200;">
+							<div class="mfMemberAccessShareLink ">
+								<div class="mfMemberAccessCreateLink"><img src="index_data_003/link-icon.png" alt="">Create share link</div>
+							</div>
+							<div class="mfMemberAccessRemoveLinkWrapper">
+								<a class="" id="mfMemberAccessURL" target="_blank"><i class="mficon-external_link" style="font-weight:bold; margin-right: 5px;"></i>Open link</a>
+								<div class="mfMemberAccessIconsWrapper">
+									<span class="mficon-copy" id="mfPublicUrlCopy" data-placement="top" data-original-title="Click to copy"></span>
+									<span class="mfMemberAccessRemoveLink mficon-trash2" data-toggle="tooltip" data-placement="top" data-original-title="Remove link"></span>
+									<span id="mfMemberAccessEdit" class="mficon-create_new" data-toggle="tooltip" data-placement="top" data-original-title="Edit link"></span>
+								</div>
+								
+							</div>
+							
+								
+					</div>
+					<input style="position: absolute;bottom: 0;z-index: 100;" id="mfPublicUrlCopyVal">
+			
+	</div>
+	
+	
+	<!--  dummy loader -->
+	<div id="mfMemberListLoaderWrapper" style="display:none;">
+		<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfSVGLoader" id="mfMemberListLoader" style="position: absolute; left:100px; display: none;">
+	</div>	
+	
+	<div id="mfMemberListBlankWrapper" style="display:none;">
+		<div id="mfMemberBlankImage" style="cursor: pointer; position: absolute; display: none; text-align:center; left: -10px;">
+			<img alt="" src="index_data_003/add-members-icon.png" style="margin-bottom: 12px;">
+			<p style="font-size: 22px; color: #f2f2f2;">Add team members</p>
+		</div>
+		
+	</div>	
+		
+			
+			
+			<!-- modal dialogs -->
+			
+			<div class="modal fade hide mfModalWithTooltip" id="mfNewProjectModal">
+		  <!-- <div class="modal-header"> 
+		    	
+				<h3 id="mfNewProjectModalTitle">New Project</h3>
+		  </div> -->
+		  <div class="modal-body" style="overflow: hidden; padding:0 !important;">
+		  		<div class="divDialogElements" id="mfNewProjectModalScreen1" style="display: block; overflow: hidden;">
+					<div class="divDialogImage" style="background: #f2f2f2; text-align:center; float:left; box-sizing:border-box;">
+		  				<img src="index_data_003/newProjectDialogueImage.png" alt="">
+		  		    </div>
+		  		    
+		  		    <div class="divDialogContents" style="background-color:#fff; padding:20px 24px;  float:left; box-sizing:border-box; position:relative;">
+		  				<h3 id="mfNewProjectModalTitle">New StyleGuide</h3>
+		  				
+		  				<p style="color: #999; font-size: 12px;">Create design specs and branding guidelines</p>
+		  				<div class="divDialogBottom" style="">
+		  				<br><input class="xlarge " id="newProjectTitle" name="xlInput" type="text" placeholder="Enter Project name">
+					
+					
+					
+					<a style="font-weight: bold;" href="https://mockflow.com/samples/styleguide" target="_blank">
+					<img class="mfImgLink hidden" src="data:image/png;base64,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" alt="Open Samples"></a>   
+					
+		  		    <a class="btn btn-primary" id="mfNewProjectModalBtn">Create</a>
+		  		    </div>
+		  
+		  		    </div>
+				</div>
+		    	<div id="mfNewProjectModalScreen2" style="display: none; width: 100%; ">
+		    		<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfSVGLoader" id="mfNewProjectModalLoader" style="top: calc(50% - 12.5px); left:calc(50% - 12.5px); position:absolute;">
+				</div>
+				<br>					
+		  </div>
+		  
+	</div>	
+	
+	<div class="modal fade hide mfModalWithTooltip" id="mfRenameProjectModal">
+		  <div class="modal-header">
+				<h3 id="mfRenameProjectModalTitle">Rename Project</h3>
+		  </div>
+		  <div class="modal-body" style="">
+		  		<div class="divDialogElements" id="mfRenameProjectModalScreen1">
+					<input class="xlarge " id="mfRenameProjectModalText" name="xlInput" type="text">
+				</div>
+		    	<div id="mfRenameProjectModalScreen2" style="display: none; width: 100%; ">
+					<div class="mfLoaderWrapper" id="mfRenameProjectModalLoader">
+						<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		    	<a class="btn mfActionBtn" id="mfRenameProjectModalBtn">Rename</a>
+		  </div>
+	</div>	
+	
+	<div class="modal fade hide" id="mfReadonlyProjectModal">
+		  <div class="modal-header">
+				<h3>Archive this project?</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div>
+		  			<p id="mfReadonlyModalTeamPackMsg" style="display:none">The project will open only in reviewer mode for all members of the project. You can restore it back anytime to make changes.</p>
+		  			<p id="mfReadonlyModalOthersMsg" style="display:none">The project will open only in reviewer mode for all members of the project. You can restore it back anytime to make changes.<br><br>Note: Project archiving feature is available only for TeamPack users with yearly license.</p>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		  		<a class="btn mfRestBtn" id="mfReadonlyProjectModalCloseBtn">Cancel</a>
+		    	<a class="btn mfActionBtn" id="mfReadonlyProjectModalUpgradeBtn">Upgrade</a>
+		    	<a class="btn mfActionBtn" id="mfReadonlyProjectModalOkBtn">Ok</a>
+		  </div>
+	</div>
+	
+	<div class="modal fade hide" id="mfDelProjectModal">
+		  <div class="modal-header">
+				<h3 id="mfDelProjectModalTitle">Delete project</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfDelProjectModalScreen1" style="display: block; width: 100%; overflow: hidden;">
+		  			<div class="mfModalSubTitle">Enter password to delete project: </div>
+					<input class="xlarge" id="mfDelProjectModalPass" name="xlInput" type="password">
+					
+					<span id="mfDelProjectModalNotePremium" style="display: none;">Note:
+ This project will be moved to Trash and permanently deleted in 30 days.
+ You can also restore it back or delete permanently from the Trash. 
+Custom labels assigned to this project will not be restored.</span>
+					<span id="mfDelProjectModalNoteBasic" style="display: none;">Note: This will permanently delete your project. Upgrade your account to enable Trash feature</span>
+				</div>
+		    	<div id="mfDelProjectModalScreen2" style="display: none; width: 100%; ">
+					<div class="mfLoaderWrapper" id="mfDelProjectModalLoader">
+						<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		    	<a class="btn mfActionBtn" id="mfDelProjectModalBtn">Delete</a>
+		  </div>
+	</div>	
+	
+	
+	<div class="modal fade hide" id="mfTeamModal" style="width: 500px; height: 500px;overflow: hidden; max-height: 500px;">
+		  <div class="modal-header">
+				<h3 id="mfTeamModalTitle">My Team</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfTeamModalScreen1" style="display: block; width: 100%; overflow: hidden;">
+		  		
+		  				<div style="width: 100%; height: 50px;">
+		  					<div style="width:380px; height: 100%; float: left;">
+		  						<input placeholder="Enter E-Mail" class="xSmall" id="mfTeamAddMemberBox" name="xlInput" type="text" style="font-size: 14px; width: 100%; height: 30px;">		  						
+		  					</div>
+		  					<div style="width:50px; height: 100%; float: right; text-align: right;">
+		  						<a id="mfTeamManagerAddBtn" class="btn btn-primary" style="height: 18px;">Add</a>	  		
+		  					</div>
+		  				</div>
+		  				
+		  				<div id="mfTeamList" style="overflow : auto;position:absolute;top: 130px;width: 440px;height: 350px;">
+		  				
+		  				
+		  				</div>
+		  				<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfSVGLoader" id="mfTeamManagerLoader" style="top: 285px; left: calc(50% - 12.5px); position:absolute;">
+				</div>
+		    				
+		  </div>		 
+	</div>	
+	
+	
+	
+	<div class="modal fade hide mfModalWithTooltip" id="mfAddLabelModal">
+		  <div class="modal-header">
+				<h3 id="mfAddLabelModalTitle">New Label</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfAddLabelModalScreen1" style="display: block; width: 100%; overflow: hidden;">
+					<input class="xlarge " id="mfAddLabelTitle" name="xlInput" type="text">
+				</div>
+		    	<div id="mfAddLabelModalScreen2" style="display: block; width: 100%; ">
+					<div class="mfLoaderWrapper" id="mfAddLabelModalLoader">
+						<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		    	<a class="btn mfActionBtn" id="mfAddLabelModalBtn">Create</a>
+		  </div>
+	</div>	
+	
+	
+	<div class="modal fade hide" id="mfHelpLabelModal">
+		  <div class="modal-header">
+				<h3 id="mfHelpLabelModalTitle">About labels</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements">
+		  			<p>'Labels' are for organizing projects in MockFlow. A project can be assigned to multiple labels.</p>
+		  			<div class="mfModalSubTitle">Add labels</div>
+		  			<p>Click the 'Add' button in sidebar to create new labels and trash button to delete</p>
+		  			<div class="mfModalSubTitle">Assign labels</div>
+		  			<p>Click on a project and in menu, select 'Manage labels' to assign labels</p>
+		  			<div class="mfModalSubTitle">Rename labels</div>
+		  			<p>Select a label and click the edit icon in label sidebar</p>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		    	<a class="btn mfActionBtn" id="mfHelpLabelModalCloseBtn">Close</a>
+		  </div>
+	</div>	
+	
+	
+	<div class="modal fade hide mfModalWithTooltip" id="mfRenameLabelModal">
+		  <div class="modal-header">
+				<h3 id="mfRenameLabelModalTitle">Rename Label</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfRenameLabelModalScreen1" style="display: block; width: 100%; overflow: hidden;">
+					<input class="xlarge " id="mfRenameLabelModalText" name="xlInput" type="text">
+				</div>
+		    	<div id="mfRenameLabelModalScreen2" style="display: none; width: 100%; ">
+					<div class="mfLoaderWrapper" id="mfRenameLabelModalLoader">
+						<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+		    	<a class="btn mfActionBtn" id="mfRenameLabelModalBtn">Rename</a>
+		  </div>
+	</div>
+	
+	
+<div id="mfShareModal" style="position: absolute; display: none; z-index: 500;  background-color: transparent; width: 530px; height: 500px; max-height: 500px; top:10px;">
+			<div class="mfShareModalContent" style="display: block; padding: 10px;  position: absolute; left: 10px; top: 10px; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 0px;  width: 480px; height: 500px; color: #505F68;"> 
+		
+			  <div style="padding: 10px; padding-left: 15px; padding-bottom: 5px;">
+			    	
+					<h3 id="mfShareModalTitle">Share Project</h3>
+			  </div>
+			  <div class="modal-body" style="overflow: hidden;">
+			  		<div class="divDialogElements" id="mfShareModalMembersScreen" style="display: block; width: 100%; overflow: hidden;">
+			  		
+			  				<div style="width: 440px; height: 50px;">
+								<form onsubmit="return false;"><input data-role="tagsinput" placeholder="e.g.: matt@acme.com, joe@site.com - Press 'Enter' key to add" class="xSmall" id="mfShareAddMemberBox" name="xlInput" type="text" style="font-size: 14px; padding-right: 50px; width: 395px; height: 24px;"></form>		  						
+			  					
+			  					<span id="mfAddToUserList" data-placement="bottom" class="mficon-angle-down-circle" style="display: none; position: absolute;left: 445px;top: 73px;color: #2196F3;font-size: 20px; cursor: pointer;" data-original-title="Add to user list"></span>
+			  							  					
+			  				</div>
+			  				
+			  				<div id="mfShareMemberChkAllContainer" style="width: 100px;"><label style="cursor: pointer;"><input type="checkbox" id="mfShareMemberChkAll" style="height: 20px;width: 15px;float: left;margin: 0 18px 0 5px;">Select all</label>
+			  				</div> 
+			  				
+			  				
+			  				
+			  				<div id="mfShareList" style="overflow : auto;  position:absolute; top: 140px; width: 460px; height: 320px;border-bottom: solid 1px #eee;">
+			  					
+			  						
+			  				
+			  				</div>
+			  				
+			  				<button id="mfShareMemberBtn" type="button" style="border: 1px solid rgb(33, 150, 243); outline: none; background: none;position: absolute;bottom: 15px;right: 35px; color: rgb(33, 150, 243);" class="btn"><i class="mficon-share" style="vertical-align: middle;"></i> &nbsp;Share</button>
+			  				<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfSVGLoader" id="mfShareManagerLoader" style="top: 50%; left:calc(50% - 12.5px); position: absolute;">
+					</div>
+					
+					<div id="mfShareModalChangeScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+					
+							<span style="position: absolute; top: 60px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>
+					
+							<div id="mfShareChangeMemberBtn" style="cursor: pointer;" class="">
+									
+									
+									<div class="mfShareMemberTypeAdd" style=" border: 1px solid #a66bbe; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 120px; left: 30px;">
+										<span class="mficon-user_male" style="font-size: 30px; color: #a66bbe; position: absolute; top: 11px; left: 13px;"></span>
+									</div>							 	 
+									<span style="color: #666; left: 110px; top: 130px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Modify</span><br>Change member role or modify permissions</span>
+							</div> 
+			  					
+			  				<div id="mfShareMailMemberBtn" style="cursor: pointer;" class="">
+			  				
+			  					<div class="mfShareMemberTypeAdd" style=" border: 1px solid #3498db; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 240px; left: 30px;">
+										<span class="mficon-message" style="font-size: 30px; color: #3498db; position: absolute; top: 13px; left: 13px;"></span>
+								</div>	
+									
+								<span style="color: #666; left: 110px; top: 250px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Invite</span><br>Re-send email invitation to join project</span>
+							</div>
+								 
+							<div id="mfShareDelMemberBtn" style="cursor: pointer;" class="">
+							
+								<div class="mfShareMemberTypeAdd" style=" border: 1px solid #e74c3c; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 370px; left: 30px;">
+										<span class="mficon-trash2" style="font-size: 30px; color: #e74c3c; position: absolute; top: 13px; left: 13px;"></span>
+								</div>	
+									
+								<span style="color: #666; left: 110px; top: 380px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Remove</span><br>Remove this member from this project.
+								</span>
+							</div>
+		  					
+					</div>
+					
+					<div id="mfShareModalTypeScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+					
+							<span style="position: absolute; top: 60px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>
+					
+						
+			  				<div id="mfAddReviewerBtn" style="cursor: pointer;" class="">		
+						
+								<div class="mfShareMemberTypeAdd" style=" border: 1px solid #3498db; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 100px; left: 30px;">
+											<span class="mficon-invisible" style="font-size: 30px; color: #3498db; position: absolute; top: 13px; left: 13px;"></span>
+								</div>
+											
+								<span style="color: #666; left: 110px; top: 110px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Reviewer</span><br>View design specifications</span>
+							</div>
+			  				
+			  				<div id="mfAddEditorBtn" style="cursor: pointer; opacity: 0.3;" class="">		
+						
+								<div class="mfShareMemberTypeAdd" style=" border: 1px solid #3498db; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 230px; left: 30px;">
+											<span class="mficon-sign_up" style="font-size: 30px; color: #3498db; position: absolute; top: 11px; left: 13px;"></span>
+								</div>
+											
+								<span style="color: #666; left: 110px; top: 240px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Designer</span><br>All reviewer permissions + edit StyleGuide</span>
+							</div>
+								
+							<div id="mfAddAdminBtn" style="cursor: pointer; opacity: 0.3;" class="">	
+							
+								<div class="mfShareMemberTypeAdd" style=" border: 1px solid #3498db; border-radius: 100%; width: 56px; height: 56px; cursor:pointer; position: absolute; top: 360px; left: 30px;">
+											<span class="mficon-administrator" style="font-size: 30px; color: #3498db; position: absolute; top: 11px; left: 13px;"></span>
+								</div>
+										
+								<span style="color: #666; left: 110px; top: 360px; width: 300px; height: 50px; position: absolute; "><span style="color: #000; font-weight: normal; font-size: 14px;">Admin</span><br>Full rights to the project like owner. Can rename and share this project.
+								Cannot Delete project</span>
+							</div>
+			  					
+		  					<span id="mfSharePermissionTxt" style="background-color: rgb(240, 240, 240); color: rgb(102, 102, 102); border-radius: 10px; padding: 10px; font-weight: normal; width: 400px; font-size: 12px; position: absolute; top: 445px; left: 30px;"><strong>Note:</strong> Designer and Admin user permissions are available only in Team-Pack plan. <a href="https://mockflow.com/pricing" target="_blank">Click here to upgrade</a></span>							
+			  				
+		  					
+		  					<span id="mfShareGoBackBtn" class="mfImgLink mficon-angle-left-circle" style="font-weight: normal; color: #888; font-size: 26px; position: absolute; top: 450px; left: 455px; cursor: pointer;"></span>
+
+					</div>
+					
+					
+				
+				<div id="mfShareModalReviewerAdvScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+				
+						<span style="position: absolute; top: 60px; left: 30px; font-size: 14px; font-weight:bold; text-align: right; width: 450px;">Advanced Permissions for Reviewer<br><span style="font-size: 11px; font-weight: normal;">Can be reconfigured later</span></span>
+						
+						<span style="position: absolute; top: 125px; left: 30px; font-size: 12px; color: #000; font-weight: normal; text-align: left; width: 450px;">
+							
+								<br><br>
+							
+								No Special permissions available for Reviewer
+							</span>
+						
+						<span style="position: absolute; top: 445px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>						
+						
+						
+						
+				</div>
+				
+				<div id="mfShareModalApproverAdvScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+				
+						<span style="position: absolute; top: 60px; left: 30px; font-size: 14px; font-weight:bold; text-align: right; width: 450px;">Advanced Permissions for Approver<br><span style="font-size: 11px; font-weight: normal;">Can be reconfigured later</span></span>
+						
+						<span style="position: absolute; top: 125px; left: 30px; font-size: 12px; color: #000; font-weight: normal; text-align: left; width: 450px;">
+							
+								<br><br>
+							
+								No Special permissions available for Approver
+							</span>
+						
+						
+						<span style="position: absolute; top: 445px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>						
+						
+						
+						
+				</div>
+				
+				<div id="mfShareModalAdminAdvScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+							
+						<span style="position: absolute; top: 60px; left: 30px; font-size: 14px; font-weight:bold; text-align: right; width: 450px;">Advanced Permissions for Admin<br><span style="font-size: 11px; font-weight: normal;">None available for this type</span></span>
+						
+						
+						<span style="position: absolute; top: 125px; left: 30px; font-size: 12px; color: #000; font-weight: normal; text-align: left; width: 450px;">
+						
+							<span style="color: #666; font-weight: normal; font-size: 18px;">::Administrator</span><br><br>
+						
+							Admin has full rights to the Project like the Project Owner.<br><br>
+
+							Can rename &amp; share this project with other Designers or Reviewers but cannot share with other Admins. <br><br>
+								
+							Cannot Delete project.
+						</span>
+						
+						
+						
+						
+						<span style="position: absolute; top: 445px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>						
+						
+					
+				</div>
+				
+				<div id="mfShareModalEditorAdvScreen" style="display: none; width: 100%; height: 100%; overflow: hidden;">
+				
+						<span style="position: absolute; top: 60px; left: 30px; font-size: 14px; font-weight:bold; text-align: right; width: 450px;">Advanced Permissions for Designer<br><span style="font-size: 11px; font-weight: normal;">Can be reconfigured later</span></span>
+						
+						
+						<span style="position: absolute; top: 125px; left: 30px; font-size: 18px; color: #666; font-weight: normal; text-align: left; width: 450px;">::Project</span>
+						
+						<form style="position: absolute; top: 160px; left: 40px; width: 100%;"><label class="checkbox"><input class="mfAdvancedPermChk" type="checkbox" id="mfEditorPermAddSection" value="option1">Add Sections</label></form>
+						<form style="position: absolute; top: 190px; left: 40px; width: 100%;"><label class="checkbox"><input class="mfAdvancedPermChk" type="checkbox" id="mfEditorPermDeleteSection" value="option1">Delete Sections</label></form>
+						
+						<form style="position: absolute; top: 230px; left: 40px; width: 100%;"><label class="checkbox"><input class="mfAdvancedPermChk" type="checkbox" id="mfEditorPermEditItem" value="option1">Modify Items</label></form>
+						<form style="position: absolute; top: 260px; left: 40px; width: 100%;"><label class="checkbox"><input class="mfAdvancedPermChk" type="checkbox" id="mfEditorPermDeletItem" value="option1">Delete Items</label></form>
+						<form style="position: absolute; top: 290px; left: 40px; width: 100%;"><label class="checkbox"><input class="mfAdvancedPermChk" type="checkbox" id="mfEditorPermChangeTheme" value="option1">Change Themes</label></form>
+											
+							
+						
+						
+						
+						<span style="position: absolute; top: 445px; left: 30px;">For: <span class="mfShareForMember" style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 350px;font-weight: bold;"></span></span>						
+						
+					
+				</div>
+		    				
+		  </div>	
+		  
+		  		 <span id="mfShareCloseBtn" class="mficon-exit mfImgLink" style="cursor: pointer; position: absolute; left: 460px; top: 25px; font-size: 24px; color: #666; "></span>
+		  	 
+	</div>
+	
+	</div>
+	
+	
+	
+	
+	<div class="modal fade hide" id="mfCopyProjectModal">
+		  <div class="modal-header">
+				<h3 id="mfCopyProjectModalTitle">Copy Project to User</h3>
+		  </div>
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfCopyProjectModalScreen1" style="display: block; width: 100%; overflow: hidden;">
+		  			<div class="mfModalSubTitle">Enter email address of the user to transfer a copy of this project:</div>
+					<input placeholder="Enter E-Mail" class="xSmall" id="mfCopyProjectModalText" name="xlInput" type="text">
+		  			<div class="pull-right">
+  						<a id="mfCopyProjectBtn" class="btn mfActionBtn">Copy</a>	  		
+  					</div>
+  					<div class="mfNoteBlock">
+						<div class="mfModalSubTitle mfClearfix">Note:</div>
+						<p>This is not sharing. This transfers a copy of this project to 
+another user. That user will have full ownership rights of the 
+transferred copy.
+						<span>A "paid" MockFlow account with this email should already exist for this process.</span></p>
+					</div>
+				</div>
+		    	<div id="mfCopyProjectModalScreen2" style="display: none; width: 100%; ">
+					<div class="mfLoaderWrapper" id="mfCopyProjectModalLoader">
+						<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+					</div>
+				</div>
+		  </div>
+		  
+	</div>
+	
+		<div class="modal fade hide" id="mfDuplicateProjectModal">
+		  <div class="modal-header">
+		    	
+				<h3>Duplicating project...</h3>
+		  </div>
+		  <div class="modal-body">
+		    	<div class="mfLoaderWrapper">
+		    		<img alt="Loading" src="index_data_003/mf_loader.svg" class="mfCenterAlign mfSVGLoader">
+				</div>			
+		  </div>
+		  
+	</div>
+	
+	
+	
+	
+	<div class="modal fade hide" id="mfPublicLinkModal">
+		  <div class="modal-header">
+				<h3 id="mfPublicLinkModalTitle">Public access</h3>
+		  </div> 
+		  <div class="modal-body">
+		  		<div class="divDialogElements" id="mfPublicLinkModalScreen1" style="display: block; width: 100%; height: 100%; overflow: hidden;">
+  					<p>This enables public access for this project and anybody with 
+this link can view this project. On creating the public link, click 
+"Open URL" to copy the URL created.</p>	 
+  					<div class="mfModalSubTitle">Enter your custom URL</div>
+	  					<div style="position:relative;">
+		  					<div class="mfTextboxWrapper">
+								<span>https://styleguide.mockflow.com/view/</span> <input type="text" id="mfPublicAccessURL">
+							</div>
+							<input style="position: absolute;top: 0;left:0;width:calc(100% - 30px);" id="mfPublicAccessURLVal">
+						</div>
+						
+					 <span id="mfCopyToClipboardBtn" data-original-title="Click to copy">
+					 	<i class="mficon-copy"></i>
+					 </span> 
+
+					<span id="mfPublicLinkError" style="color: #F00; display: none;">URL is not available</span>
+					<div class="pull-right">
+						<a class="btn mfRestBtn" id="mfPublicLinkresetURL">Reset</a>
+						<a id="mfPublicLinkCreateBtn" class="btn mfActionBtn">Create</a>
+					</div>
+				</div>
+		  </div>		 
+	</div>	
+	
+	
+			
+			
+		 
+			<div id="mfActionIndicator">
+
+&nbsp; <span id="mfActionIndicatorMessage"></span>
+
+</div>
+			
+			
+			
+			<div class="mfProjectMenuClass" id="mfProjectMenu" style="display: none;">	
+		<ul>
+			<li id="mfOpenMenuRenameBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Rename</li>
+			<li id="mfOpenMenuDuplicateBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Duplicate</li>
+			<li id="mfOpenMenuCopyBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Send copy to</li>
+			<li id="mfOpenMenuReadonlyBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Archive</li>
+			<li id="mfOpenMenuDelBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Delete</li>
+		</ul>
+</div>		
+
+<div class="mfProjectMenuClass" id="mfAdminProjectMenu" style="display: none;">
+		<ul>
+			<li id="mfOpenAdminMenuDuplicateBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Duplicate</li>
+			<li id="mfOpenAdminMenuCopyBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Send copy to</li>
+			<li id="mfOpenAdminMenuRenameBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Rename</li>		
+			<li id="mfOpenAdminMenuDelBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Delete access</li>
+		</ul>
+</div>	
+
+<div class="mfProjectMenuClass" id="mfSharedProjectMenu" style="display: none;">
+		<ul>
+			<li id="mfOpenSharedMenuDelBtn" class="mfOpenMenuItem"><div class="mfRoundIcon"></div>Delete access</li>
+		</ul>
+</div>
+			
+			
+			
+	
+
+
+
+
+
+
+
+
+</body></html>

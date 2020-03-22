@@ -1,0 +1,63 @@
+  937  ls
+  938  cd real
+  939  cd ..
+  940  ls
+  941  mkdir real/ telluric gas-giants dwarf-planets
+  942  ls
+  943  cd real
+  944  ls
+  945  mkdir telluric gas-giants dwarf-planets
+  946  ls
+  947  cd ..
+  948  ls
+  949  mv earth.jpeg jupiter.jpeg mercury.jpeg pluto.jpeg saturn.jpeg uranus.jpeg mars.jpeg neptune.jpeg venus.jpeg real
+  950  ls
+  951  cd real
+  952  ls
+  953  cd ..
+  954  mv arrakis.jpeg cybertron.jpeg coruscant.jpeg ~/Desktop/Quetes_wild/planets\ \(doublon\)/fictional/
+  955  cd fictional/
+  956  ls
+  957  cd ..
+  958  ls
+  959  tree
+  960  mv real/earth.jpeg inhabited/
+  961  tree
+  962  mv fictional/arrakis.jpeg inhabited/
+  963  tree
+  964  mv fictional/coruscant.jpeg inhabited/
+  965  mv fictional/cybertron.jpeg inhabited/
+  966  tree
+  967  cd real
+  968  ls
+  969  tree
+  970  mv -t mercury.jpeg venus.jpeg mars.jpeg telluric/
+  971  mv mercury.jpeg venus.jpeg mars.jpeg telluric/
+  972  ls
+  973  tree
+  974  mv ../inhabited/earth.jpeg telluric/
+  975  tree
+  976  ls
+  977  mv pluto.jpeg dwarf-planets/
+  978  tree
+  979  cd ..
+  980  tree
+  981  mv real/uranus.jpeg gas-giants/
+  982  tree
+  983  mv gas-giants/uranus.jpeg real/gas-giants/
+  984  tree
+  985  rm gas-giants/
+  986  rmdir gas-giants/
+  987  tree
+  988  rmdir dwarf-planets/
+  989  tree
+  990  rmdir telluric/
+  991  tree
+  992  mv real/jupiter.jpeg real/neptune.jpeg real/saturn.jpeg real/gas-giants/
+  993  tree
+  994  rm -r real/dwarf-planets/
+  995  tree
+  996  history
+  997  history -n 60
+  998  history | tail -n 62
+  999  history | tail -n 63 > history.txt
